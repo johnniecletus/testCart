@@ -7,10 +7,7 @@ const CartItem = (props) => {
   const { title, quantity, total, price, id } = props.item;
   
   const removeFromCart = () => {
-    dispatch(CartAction.removeNewCartItem({
-      id,
-      price,
-    }));
+    dispatch(CartAction.removeNewCartItem(id));
   };
   const addToCart = () => {
     dispatch(CartAction.addNewCartItem({
